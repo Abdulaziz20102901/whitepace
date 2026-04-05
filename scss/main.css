@@ -1,10 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
 .container {
   max-width: 1200px;
   margin: 0px auto;
+}
+
+header {
+  background-color: #043873;
+}
+
+nav {
+  padding: 30px 0px;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .container .Whitepace_logo {
+  width: 190px;
+}
+nav .container .Whitepace_logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: nav_logo 2s linear infinite;
+}
+@keyframes nav_logo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+nav .container ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+nav .container ul i {
+  padding-left: 15px;
+}
+nav .container ul li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+nav .container ul li:hover {
+  transform: translateY(-5px);
+  color: #ffe492;
+  cursor: pointer;
+}
+nav .container ul li:active {
+  transform: scale(0.9);
+}
+nav .container ul li::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: -5px;
+  left: 0px;
+  background-color: #ffe492;
+  transition: all 0.3s ease;
+}
+nav .container ul li:hover::after {
+  width: 100%;
+}
+nav .container .nav_btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav .container .nav_btn .nav_btn_1 button {
+  padding: 10px 30px;
+  color: #043873;
+  font-weight: 600;
+  border: 1px solid #ffe492;
+  background-color: #ffe492;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+nav .container .nav_btn .nav_btn_1 button:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+}
+nav .container .nav_btn .nav_btn_1 button:active {
+  transform: scale(0.9);
+}
+nav .container .nav_btn .nav_btn_2 button i {
+  padding-left: 10px;
+}
+nav .container .nav_btn .nav_btn_2 button {
+  padding: 10px 30px;
+  border: 1px solid #4f9cf9;
+  background-color: #4f9cf9;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+nav .container .nav_btn .nav_btn_2 button:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+}
+nav .container .nav_btn .nav_btn_2 button:active {
+  transform: scale(0.9);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  padding: 45px 0px;
+}
+.hero .container .hero_text {
+  width: 550px;
+}
+.hero .container .hero_text h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.hero .container .hero_text p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+.hero .container .hero_text button i {
+  padding-left: 10px;
+}
+.hero .container .hero_text button {
+  padding: 10px 30px;
+  border: 1px solid #4f9cf9;
+  background-color: #4f9cf9;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.hero .container .hero_text button:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+}
+.hero .container .hero_text button:active {
+  transform: scale(0.9);
+}
+.hero .container .hero_img {
+  width: 600px;
+}
+.hero .container .hero_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+}
+.hero .container .hero_img img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 5px 1px gray;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
