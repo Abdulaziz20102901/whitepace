@@ -1,11 +1,193 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0px auto;
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
+header {
+  background-color: #043873;
+}
+
+nav {
+  padding: 30px 0px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Whitepace_logo {
+      width: 190px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        animation: nav_logo 2s linear infinite;
+        @keyframes nav_logo {
+          0% {
+            transform: rotateY(0deg);
+          }
+
+          100% {
+            transform: rotateY(360deg);
+          }
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+      i {
+        padding-left: 15px;
+      }
+      li {
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        position: relative;
+        &:hover {
+          transform: translateY(-5px);
+          color: #ffe492;
+          cursor: pointer;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0px;
+          height: 2px;
+          bottom: -5px;
+          left: 0px;
+          background-color: #ffe492;
+          transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .nav_btn {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .nav_btn_1 {
+        button {
+          padding: 10px 30px;
+          color: #043873;
+          font-weight: 600;
+          border: 1px solid #ffe492;
+          background-color: #ffe492;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+            background-color: transparent;
+            color: #ffffff;
+          }
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+
+      .nav_btn_2 {
+        button {
+          i {
+            padding-left: 10px;
+          }
+          padding: 10px 30px;
+          border: 1px solid #4f9cf9;
+          background-color: #4f9cf9;
+          border-radius: 5px;
+          color: #ffffff;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+            background-color: transparent;
+            color: #ffffff;
+          }
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    padding: 45px 0px;
+    .hero_text {
+      width: 550px;
+      h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 35px;
+      }
+
+      button {
+        i {
+          padding-left: 10px;
+        }
+        padding: 10px 30px;
+        border: 1px solid #4f9cf9;
+        background-color: #4f9cf9;
+        border-radius: 5px;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: translateY(-5px);
+          cursor: pointer;
+          background-color: transparent;
+          color: #ffffff;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    .hero_img{
+        width: 600px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            transition: all .3s ease;
+            &:hover{
+                transform: translateY(-5px);
+                box-shadow: 0px 0px 5px 1px gray;
+                cursor: pointer;
+            }
+        }
+    }
+  }
+}
